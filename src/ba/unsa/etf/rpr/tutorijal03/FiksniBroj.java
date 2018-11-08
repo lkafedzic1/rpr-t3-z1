@@ -14,9 +14,9 @@ public class FiksniBroj extends TelefonskiBroj {
     private Grad grad;
     public final String getBroj() {return broj;}
     public final Grad getGrad() {return grad;}
-    public FiksniBroj(Grad g, String string) {
+    public FiksniBroj(Grad g, String br) {
         this.grad = g;
-        this. broj = broj;
+        this. broj = br;
     }
     @Override
     public final String ispisi() {
@@ -37,7 +37,7 @@ public class FiksniBroj extends TelefonskiBroj {
             case LIVNO:
                 pozivni_broj = 34; break;
             case TUZLA:
-                pozivni_broj = 35; break;
+                pozivni_broj = 35; break;/*
             case MOSTAR:
                 pozivni_broj = 36; break;
             case BIHAC:
@@ -67,7 +67,7 @@ public class FiksniBroj extends TelefonskiBroj {
             case FOCA:
                 pozivni_broj = 58; break;
             case TREBINJE:
-                pozivni_broj = 59; break;
+                pozivni_broj = 59; break;*/
 
         }
         return pozivni_broj;
