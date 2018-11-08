@@ -19,7 +19,7 @@ public class FiksniBroj extends TelefonskiBroj {
     }
     @Override
     public String ispisi() {
-        String ispis = 0+this.grad.hashCode()+"/"+this.broj;
+        String ispis = "0"+this.grad.hashCode()+"/"+this.broj;
         return ispis;
     }
     @Override

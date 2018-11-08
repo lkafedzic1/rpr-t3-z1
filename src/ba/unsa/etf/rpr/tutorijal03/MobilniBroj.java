@@ -11,7 +11,7 @@ public class MobilniBroj extends TelefonskiBroj {
     //Metoda ispisi vraća broj istog oblika "061/987-654"
     @Override
     public String ispisi(){
-        String ispis = 0+mobilnaMreza+"/"+broj;
+        String ispis = "0"+mobilnaMreza+"/"+broj;
         return ispis;
     }
     @Override
