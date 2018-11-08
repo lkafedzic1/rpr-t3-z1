@@ -18,5 +18,9 @@ public class MobilniBroj extends TelefonskiBroj {
     public int hashCode() {
         return mobilnaMreza;
     }
+    @Override
+    public int compareTo(TelefonskiBroj obj) {
+        return 0;
+    }
 
 }

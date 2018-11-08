@@ -1,6 +1,8 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 public class FiksniBroj extends TelefonskiBroj {
+    @Override
+    public int compareTo(TelefonskiBroj obj) {return 0;}
     public enum Grad {
         TRAVNIK, ORASJE, ZENICA, SARAJEVO, LIVNO,
         TUZLA, MOSTAR, BIHAC, GORAZDE, SIROKI_BRIJEG,
