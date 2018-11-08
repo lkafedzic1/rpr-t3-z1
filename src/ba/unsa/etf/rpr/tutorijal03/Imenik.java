@@ -21,7 +21,7 @@ public class Imenik {
     }
     public String naSlovo(char s) {
         int br=0;
-        String s1=new String();
+        String s1;
         for(Map.Entry<String,TelefonskiBroj> par: mapaKorisnika.entrySet()) {
             if(par.getKey().charAt(0)==s) {
                 br++;
@@ -33,7 +33,8 @@ public class Imenik {
     public Set<String> izGrada(FiksniBroj.Grad g) {
         TreeSet<String> rez=new TreeSet<>();
         for(Map.Entry<String,TelefonskiBroj> par: mapaKorisnika.entrySet()) {
-            if(par.getValue() instanceof FiksniBroj && ((FiksniBroj) par.getValue()).getGrad().equals(g));
+            if(par.getValue() instanceof FiksniBroj && ((FiksniBroj) par.getValue()).getGrad().equals(g))
+                rez.add(par.getKey());
         }
         return rez;
     }
