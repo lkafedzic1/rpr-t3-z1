@@ -10,6 +10,7 @@ public class FiksniBroj extends TelefonskiBroj {
     }
     String broj;
     Grad grad;
+    public Grad getGrad() {return grad;}
     public FiksniBroj(Grad grad, String broj) {
         this.grad = grad;
         this. broj = broj;
