@@ -12,7 +12,7 @@ class ImenikTest {
     @Test
     void dodaj() {
         Imenik imenik = new Imenik();
-        imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
+        imenik.dodaj("John Smith", new MedjunarodniBroj("+1", "23 45-67-89"));
         imenik.dodaj("Hana Hanic", new FiksniBroj(SARAJEVO, "123-156"));
         imenik.dodaj("Meho Mehic", new FiksniBroj(SARAJEVO, "123-456"));
         assertEquals("033/123-456", imenik.dajBroj("Meho Mehic"));
@@ -25,7 +25,7 @@ class ImenikTest {
         imenik.dodaj("Pero Peric", new FiksniBroj(SARAJEVO, "123-656"));
         imenik.dodaj("Ivo Ivic", new MobilniBroj(61, "321-645"));
         imenik.dodaj("Jozo Jozic", new MobilniBroj(64, "987-654"));
-        imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
+        imenik.dodaj("John Smith", new MedjunarodniBroj("+1", "23 45-67-89"));
         assertEquals( "1. Ivo Ivic - 061/321-645", imenik.naSlovo('I').trim());
     }
 
@@ -36,7 +36,7 @@ class ImenikTest {
         imenik.dodaj("Sara Sarac", new FiksniBroj(SARAJEVO, "123-156"));
         imenik.dodaj("Meho Mehic", new FiksniBroj(SARAJEVO, "123-656"));
         imenik.dodaj("Pero Peric", new MobilniBroj(64, "987-654"));
-        imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
+        imenik.dodaj("John Smith", new MedjunarodniBroj("+1", "23 45-67-89"));
         Set<String> set = imenik.izGrada(SARAJEVO);
         String result = "";
         for (String ime: set) {
@@ -52,7 +52,7 @@ class ImenikTest {
         imenik.dodaj("Sara Sarac", new FiksniBroj(SARAJEVO, "123-156"));
         imenik.dodaj("Meho Mehic", new FiksniBroj(SARAJEVO, "123-656"));
         imenik.dodaj("Pero Peric", new MobilniBroj(64, "987-654"));
-        imenik.dodaj("John Smith", new MedunarodniBroj("+1", "23 45-67-89"));
+        imenik.dodaj("John Smith", new MedjunarodniBroj("+1", "23 45-67-89"));
         Set<TelefonskiBroj> set = imenik.izGradaBrojevi(SARAJEVO);
         String result = "";
         for (TelefonskiBroj broj: set) {
