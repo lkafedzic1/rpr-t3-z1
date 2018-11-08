@@ -1,21 +1,21 @@
 package ba.unsa.etf.rpr.tutorijal03;
 
 public class MedjunarodniBroj extends TelefonskiBroj {
-    String drzava;
-    String broj;
+    private String drzava;
+    private String broj;
     //konstruktor: string drzava sadrži kompletan pozivni broj za državu npr. "+387".
-    public MedjunarodniBroj (String drzava, String broj) {
-        this.drzava = drzava;
-        this.broj = broj;
+    public MedjunarodniBroj (String d, String br) {
+        this.drzava = d;
+        this.broj = br;
     }
     @Override
-    public int compareTo(TelefonskiBroj obj) {return 0;}
+    public final int compareTo(TelefonskiBroj obj) {return 0;}
     @Override
-    public String ispisi(){
+    public final String ispisi(){
         return drzava+broj;
     }
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         return Integer.parseInt(drzava);
     }
 }

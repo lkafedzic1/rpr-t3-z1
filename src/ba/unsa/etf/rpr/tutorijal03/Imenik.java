@@ -5,23 +5,23 @@ import java.util.*;
 public class Imenik {
     private HashMap<String, TelefonskiBroj> mapaKorisnika = new HashMap<>();
 
-    void dodaj(String ime, TelefonskiBroj broj) {
+    public final void dodaj(String ime, TelefonskiBroj broj) {
         mapaKorisnika.put(ime, broj);
     }
 
-    public String dajBroj(String ime) {
+    public final String dajBroj(String ime) {
         return mapaKorisnika.get(ime).ispisi();
     }
 
-    public String dajIme(TelefonskiBroj broj) {
+    public final String dajIme(TelefonskiBroj broj) {
         for(Map.Entry<String,TelefonskiBroj> par: mapaKorisnika.entrySet()) {
             if (par.getValue().equals(broj)) return par.getKey();
         }
         return "";
     }
-    public String naSlovo(char s) {
+    public final String naSlovo(char s) {
         int br=0;
-        String s1;
+        String s1="";
         for(Map.Entry<String,TelefonskiBroj> par: mapaKorisnika.entrySet()) {
             if(par.getKey().charAt(0)==s) {
                 br++;
@@ -30,7 +30,7 @@ public class Imenik {
         }
         return s1;
     }
-    public Set<String> izGrada(FiksniBroj.Grad g) {
+    public final Set<String> izGrada(FiksniBroj.Grad g) {
         TreeSet<String> rez=new TreeSet<>();
         for(Map.Entry<String,TelefonskiBroj> par: mapaKorisnika.entrySet()) {
             if(par.getValue() instanceof FiksniBroj && ((FiksniBroj) par.getValue()).getGrad().equals(g))
@@ -38,7 +38,7 @@ public class Imenik {
         }
         return rez;
     }
-    public Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
+    public final Set<TelefonskiBroj> izGradaBrojevi(FiksniBroj.Grad g) {
         Set<TelefonskiBroj> rez= new TreeSet<>();
         for(Map.Entry<String,TelefonskiBroj> par: mapaKorisnika.entrySet()) {
             if(par.getValue() instanceof FiksniBroj && ((FiksniBroj) par.getValue()).getGrad().equals(g))

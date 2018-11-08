@@ -2,7 +2,7 @@ package ba.unsa.etf.rpr.tutorijal03;
 
 public class FiksniBroj extends TelefonskiBroj {
     @Override
-    public int compareTo(TelefonskiBroj obj) {return 0;}
+    public final int compareTo(TelefonskiBroj obj) {return 0;}
     public enum Grad {
         TRAVNIK, ORASJE, ZENICA, SARAJEVO, LIVNO,
         TUZLA, MOSTAR, BIHAC, GORAZDE, SIROKI_BRIJEG,
@@ -10,20 +10,20 @@ public class FiksniBroj extends TelefonskiBroj {
         MRKONJIC_GRAD, BANJA_LUKA, PRIJEDOR, DOBOJ, SAMAC,
         BIJELJINA, ZVORNIK, PALE, FOCA, TREBINJE
     }
-    String broj;
-    Grad grad;
-    public Grad getGrad() {return grad;}
-    public FiksniBroj(Grad grad , String string) {
-        this.grad = grad;
+    private String broj;
+    private Grad grad;
+    public final String getBroj() {return broj;}
+    public final Grad getGrad() {return grad;}
+    public FiksniBroj(Grad g, String string) {
+        this.grad = g;
         this. broj = broj;
     }
     @Override
-    public String ispisi() {
-        String ispis = "0"+this.grad.hashCode()+"/"+this.broj;
-        return ispis;
+    public final String ispisi() {
+        return  "0"+this.grad.hashCode()+"/"+this.broj;
     }
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         int pozivni_broj = 0;
         switch (grad){
             case TRAVNIK:
